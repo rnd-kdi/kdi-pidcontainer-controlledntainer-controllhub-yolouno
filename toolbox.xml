@@ -269,7 +269,7 @@
   </category>
 
 
-  <category name="PID Control" colour="#5CA699" icon="mobile alternate">
+  <category name="PID Control" colour="#003d32ff" icon="mobile alternate">
     <block type="pid_reset"></block>
     
     <block type="set_custom_pid">
@@ -363,3 +363,9 @@
   </category>
 
 </xml>
+
+
+
+<!-- 1. Bỏ 2 khối khởi tạo PID(Gộp khởi tạo motor và set PID), -------------- 
+ 2. Bỏ chữ line trong tiền/ lùi -------------done
+ 3. Đổi màu để dễ nhìn khối di den n4, đổi chữ đến nơi thành ngã tư-->
