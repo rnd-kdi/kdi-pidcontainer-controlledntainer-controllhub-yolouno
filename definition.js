@@ -3622,6 +3622,7 @@ Blockly.Blocks['di_den_n4'] = {
 Blockly.Python['di_den_n4'] = function(block) {
   Blockly.Python.definitions_['import_logi_robot'] = 'import logi_robot';
   
+  
   var so_nga_tu = block.getFieldValue('SO_NGA_TU');
   var huong = block.getFieldValue('HUONG');
   var hanh_dong = block.getFieldValue('HANH_DONG');
