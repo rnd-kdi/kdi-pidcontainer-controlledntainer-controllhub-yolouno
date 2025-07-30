@@ -3236,7 +3236,7 @@ Blockly.Blocks['motor_stop'] = {
         .appendField("Dừng động cơ");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(100);
+    this.setColour(80);
     this.setTooltip("Dừng tất cả các động cơ");
     this.setHelpUrl("");
   }
@@ -3263,7 +3263,7 @@ Blockly.Blocks['init_pid_motor'] = {
         .appendField("Khởi tạo PID cho motor");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(100);
+    this.setColour(80);
     this.setTooltip("Khởi tạo PID và motor trước khi sử dụng");
     this.setHelpUrl("");
   }
@@ -3295,7 +3295,7 @@ Blockly.Blocks['set_toc_do_2_motor'] = {
         .appendField("Tốc độ motor 2");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(100);
+    this.setColour(80);
     this.setTooltip("Đặt tốc độ cho cả hai motor với điều khiển PID");
     this.setHelpUrl("");
   }
@@ -3334,7 +3334,7 @@ Blockly.Blocks['robot_chay_voi_toc_doc'] = {
         .appendField("Tốc độ bánh phải (rpm)");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(100);
+    this.setColour(80);
     this.setTooltip("Điều khiển robot chạy với tốc độ cho bánh trái và bánh phải");
     this.setHelpUrl("");
   }
@@ -3373,7 +3373,7 @@ Blockly.Blocks['di_thang'] = {
         .appendField("quãng đường (cm)");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(100);
+    this.setColour(80);
     this.setTooltip("Di chuyển robot thẳng theo quãng đường xác định (cm)");
     this.setHelpUrl("");
   }
@@ -3402,7 +3402,7 @@ Blockly.Blocks['init_linesensors'] = {
         .appendField("Khởi tạo cảm biến dò đường");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(100);
+    this.setColour(80);
     this.setTooltip("Khởi tạo cảm biến dò đường trước khi sử dụng");
     this.setHelpUrl("");
   }
@@ -3427,7 +3427,7 @@ Blockly.Blocks['doc_line'] = {
         .appendField("Đọc giá trị cảm biến dò đường");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(100);
+    this.setColour(80);
     this.setTooltip("Đọc và hiển thị giá trị từ cả hai cảm biến dò đường");
     this.setHelpUrl("");
   }
@@ -3455,7 +3455,7 @@ Blockly.Blocks['set_direction'] = {
         ]), "DIRECTION");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(100);
+    this.setColour(80);
     this.setTooltip("Thiết lập hướng di chuyển của robot (Tiến theo Line 0 hoặc Lùi theo Line 1)"); // Ngược lại do dảo chiều động cơ của code khai báo!!!!!!!!!!!!!!!!!!!!!
     this.setHelpUrl("");
   }
@@ -3478,7 +3478,7 @@ Blockly.Blocks['chinh_thang_line'] = {
         .appendField("Chỉnh thẳng theo đường line");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(100);
+    this.setColour(80);
     this.setTooltip("Điều chỉnh robot để đi thẳng theo đường line");
     this.setHelpUrl("");
   }
@@ -3500,7 +3500,7 @@ Blockly.Blocks['xoay_trai'] = {
         .appendField("Xoay trái");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(100);
+    this.setColour(80);
     this.setTooltip("Xoay robot sang trái cho đến khi phát hiện đường line");
     this.setHelpUrl("");
   }
@@ -3522,7 +3522,7 @@ Blockly.Blocks['xoay_phai'] = {
         .appendField("Xoay phải");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(100);
+    this.setColour(80);
     this.setTooltip("Xoay robot sang phải cho đến khi phát hiện đường line");
     this.setHelpUrl("");
   }
@@ -3552,7 +3552,7 @@ Blockly.Blocks['bam_line'] = {
         .appendField("Hệ số chênh lệch");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(100);
+    this.setColour(80);
     this.setTooltip("Điều khiển robot bám theo đường line với tốc độ và hệ số chênh lệch tùy chỉnh");
     this.setHelpUrl("");
     // Đánh dấu các tham số là tùy chọn
@@ -3612,7 +3612,7 @@ Blockly.Blocks['di_den_n4'] = {
         ]), "HANH_DONG");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(100);
+    this.setColour(80);
     this.setTooltip("Di chuyển đến ngã tư thứ k và thực hiện hành động được chọn");
     this.setHelpUrl("");
   }
