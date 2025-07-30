@@ -269,7 +269,7 @@
   </category>
 
 
-  <category name="PID Control" colour="#003d32ff" icon="mobile alternate">
+  <category name="PID Control" colour="#218572ff" icon="mobile alternate">
     <block type="pid_reset"></block>
     
     <block type="set_custom_pid">
