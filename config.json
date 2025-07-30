@@ -1,5 +1,5 @@
 {
-    "name": "ROBOTICS by KDI EDUCATION",
+    "name": "LOGISTICS ROBOT BY KDI EDU",
     "description": "Thư viện để làm ứng dụng robotics với Yolo Uno",
     "libs": [
         "constants.py",
