@@ -3612,7 +3612,7 @@ Blockly.Blocks['di_den_n4'] = {
         ]), "HANH_DONG");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(230);
+    this.setColour(100);
     this.setTooltip("Di chuyển đến ngã tư thứ k và thực hiện hành động được chọn");
     this.setHelpUrl("");
   }
