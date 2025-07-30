@@ -258,10 +258,10 @@ async def set_toc_do_2_motor(toc_do_mong_muon_motor_1, toc_do_mong_muon_motor_2)
     _motor2.run(toc_do_thuc_te_M2)
     
     # Debug info
-    # print("M1:", toc_do_thuc_te_M1, "M2:", toc_do_thuc_te_M2)
-    # print("M1 PID:", PID_M1, "speed1:", _motor1.speed(), "Error1:", Error_M1, "I1:", I_M1)
-    # print("M2 PID:", PID_M2, "Speed2:", _motor2.speed(), "Error2:", Error_M2, "I2:", I_M2)    
-    
+    print("M1:", toc_do_thuc_te_M1, "M2:", toc_do_thuc_te_M2)
+    print("M1 PID:", PID_M1, "_motor1.speed():", _motor1.speed(), "Error1:", Error_M1, "I1:", I_M1)
+    print("M2 PID:", PID_M2, "_motor2.speed():", _motor2.speed(), "Error2:", Error_M2, "I2:", I_M2)    
+    print("Kp:", Kp_motor, "Ki:", Ki_motor, "Kd:", Kd_motor)  # Debug info for PID values
     
     
     
