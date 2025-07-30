@@ -3452,13 +3452,13 @@ Blockly.Blocks['set_direction'] = {
     this.appendDummyInput()
         .appendField("Hướng di chuyển")
         .appendField(new Blockly.FieldDropdown([
-          ["Lùi", "1"], //Ngược lại do dảo chiều động cơ của code khai báo!!!!!!!!!!!!!!!!!!!!!
-          ["Tiến", "0"]
+          ["Tiến", "1"], 
+          ["Lùi", "0"]
         ]), "DIRECTION");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(230);
-    this.setTooltip("Thiết lập hướng di chuyển của robot (Tiến theo Line 0 hoặc Lùi theo Line 1)"); // Ngược lại do dảo chiều động cơ của code khai báo!!!!!!!!!!!!!!!!!!!!!
+    this.setTooltip("Thiết lập hướng di chuyển của robot (Tiến theo Line 1 hoặc Lùi theo Line 0)");  
     this.setHelpUrl("");
   }
 };
@@ -3466,7 +3466,7 @@ Blockly.Blocks['set_direction'] = {
 // Generator cho block thiết lập hướng di chuyển
 Blockly.Python['set_direction'] = function(block) {
   var direction = block.getFieldValue('DIRECTION');
-  Blockly.Python.definitions_['define_huong'] = 'huong = ' + direction + '  # 1: Lùi, 0: Tiến';   // Ngược lại do dảo chiều động cơ của code khai báo!!!!!!!!!!!!!!!!!!!!!
+  Blockly.Python.definitions_['define_huong'] = 'huong = ' + direction + '  # 1: Tiến, 0: Lùi';    
   return '';
 };
 
@@ -3602,8 +3602,8 @@ Blockly.Blocks['di_den_n4'] = {
     this.appendDummyInput()
         .appendField("Hướng đi")
         .appendField(new Blockly.FieldDropdown([
-          ["Lùi", "1"], // Ngược lại do dảo chiều động cơ của code khai báo!!!!!!!!!!!!!!!!!!!!!
-          ["Tiến", "0"]
+          ["Tiến", "1"],  
+          ["Lùi", "0"]
         ]), "HUONG");
     this.appendDummyInput()
         .appendField("Hành động khi đến nơi")
