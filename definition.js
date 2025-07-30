@@ -3269,14 +3269,32 @@ Blockly.Blocks['init_pid_motor'] = {
   }
 };
 
+// // Generator cho block khởi tạo PID cho motor
+// Blockly.Python['init_pid_motor'] = function(block) {
+//   // Đảm bảo module được import
+//   Blockly.Python.definitions_['import_logi_robot'] = 'import logi_robot';
+
+//   // Chỉ có nhiệm vụ in ra dòng khởi tạo motors
+//   var code = 'logi_robot.init_motors(motor1, motor2)\n';
+//   return code;
+// };
+
 // Generator cho block khởi tạo PID cho motor
 Blockly.Python['init_pid_motor'] = function(block) {
   // Đảm bảo module được import
   Blockly.Python.definitions_['import_logi_robot'] = 'import logi_robot';
-  Blockly.Python.definetions_['init_logi_robot'] = 'logi_robot.init_motors(motor1, motor2)'; // Khởi tạo logi_robot
-  // Chỉ có nhiệm vụ in ra dòng khởi tạo motors
-  var code = '';
-  return code;
+
+  // Đưa đoạn mã khởi tạo motor xuống dưới tất cả phần khai báo (sẽ nằm trong phần body)
+  const initCode = 'logi_robot.init_motors(motor1, motor2)';
+
+  // Đảm bảo code này chỉ thêm 1 lần
+  if (!Blockly.Python.setupCodeAdded_) {
+    Blockly.Python.setupCodeAdded_ = true;
+    Blockly.Python.initCodeBlock_ = [];
+  }
+  Blockly.Python.initCodeBlock_.push(initCode);
+
+  return ''; // Không tạo code trực tiếp tại vị trí block
 };
 
 
