@@ -290,7 +290,7 @@
         </value>
     </block>
 
-    <block type="init_pid_motor"></block>
+    <!-- <block type="init_pid_motor"></block> -->
 
     <!-- <block type="motor_stop"></block> -->
 

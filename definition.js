@@ -3190,7 +3190,7 @@ Blockly.Python['pid_reset'] = function(block) {
 Blockly.Blocks['set_custom_pid'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Cài đặt giá trị PID tùy chỉnh");
+        .appendField("Khởi tạo PID cho Motor");
     this.appendValueInput("CUSTOM_KP")
         .setCheck("Number")
         .appendField("Kp");
@@ -3217,6 +3217,7 @@ Blockly.Python['set_custom_pid'] = function(block) {
   Blockly.Python.definitions_['import_logi_robot'] = 'import logi_robot';
   
   var code = 'logi_robot.set_custom_pid(' + kp + ', ' + ki + ', ' + kd + ')\n';
+  code += 'logi_robot.init_motors(motor1, motor2)\n';
   code += 'print("version7 ")\n'; // Thêm thông báo phiên bản
   return code;
 };
@@ -3256,18 +3257,18 @@ Blockly.Python['motor_stop'] = function(block) {
 
 
 
-// Định nghĩa block khởi tạo PID cho motor
-Blockly.Blocks['init_pid_motor'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("Khởi tạo PID cho motor");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(230);
-    this.setTooltip("Khởi tạo PID và motor trước khi sử dụng");
-    this.setHelpUrl("");
-  }
-};
+// // Định nghĩa block khởi tạo PID cho motor
+// Blockly.Blocks['init_pid_motor'] = {
+//   init: function() {
+//     this.appendDummyInput()
+//         .appendField("Khởi tạo PID cho motor");
+//     this.setPreviousStatement(true, null);
+//     this.setNextStatement(true, null);
+//     this.setColour(230);
+//     this.setTooltip("Khởi tạo PID và motor trước khi sử dụng");
+//     this.setHelpUrl("");
+//   }
+// };
 
 // // Generator cho block khởi tạo PID cho motor
 // Blockly.Python['init_pid_motor'] = function(block) {
@@ -3279,23 +3280,6 @@ Blockly.Blocks['init_pid_motor'] = {
 //   return code;
 // };
 
-// Generator cho block khởi tạo PID cho motor
-Blockly.Python['init_pid_motor'] = function(block) {
-  // Đảm bảo module được import
-  Blockly.Python.definitions_['import_logi_robot'] = 'import logi_robot';
-
-  // Đưa đoạn mã khởi tạo motor xuống dưới tất cả phần khai báo (sẽ nằm trong phần body)
-  const initCode = 'logi_robot.init_motors(motor1, motor2)';
-
-  // Đảm bảo code này chỉ thêm 1 lần
-  if (!Blockly.Python.setupCodeAdded_) {
-    Blockly.Python.setupCodeAdded_ = true;
-    Blockly.Python.initCodeBlock_ = [];
-  }
-  Blockly.Python.initCodeBlock_.push(initCode);
-
-  return ''; // Không tạo code trực tiếp tại vị trí block
-};
 
 
 
@@ -3630,7 +3614,7 @@ Blockly.Blocks['di_den_n4'] = {
         ]), "HANH_DONG");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(100);
+    this.setColour(230);
     this.setTooltip("Di chuyển đến ngã tư thứ k và thực hiện hành động được chọn");
     this.setHelpUrl("");
   }
