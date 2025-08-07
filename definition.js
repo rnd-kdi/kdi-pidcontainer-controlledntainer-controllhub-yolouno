@@ -3597,16 +3597,16 @@ Blockly.Python['bam_line'] = function(block) {
 Blockly.Blocks['di_den_n4'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Đi đến ngã tư thứ")
-        .appendField(new Blockly.FieldNumber(1, 1, 100), "SO_NGA_TU");
-    this.appendDummyInput()
-        .appendField("Hướng đi")
+        .appendField("Đi")
         .appendField(new Blockly.FieldDropdown([
           ["Tiến", "1"],  
           ["Lùi", "0"]
         ]), "HUONG");
     this.appendDummyInput()
-        .appendField("Hành động khi đến nơi")
+        .appendField("Đến ngã tư số")
+        .appendField(new Blockly.FieldNumber(1, 1, 100), "SO_NGA_TU");
+    this.appendDummyInput()
+        .appendField("Hành động sau khi đến nơi")
         .appendField(new Blockly.FieldDropdown([
           ["Dừng lại", "D"],
           ["Rẽ trái", "T"],
