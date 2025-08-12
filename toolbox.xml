@@ -335,7 +335,6 @@
       <field name="DIRECTION">1</field>
     </block>
 
-
     <!-- <block type="chinh_thang_line"></block> -->
 
     <block type="xoay_trai"></block>
